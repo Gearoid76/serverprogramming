@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Add Student</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1> Add student</h1>  
+	<div>  
+ 		 <form th:object="${student}" th:action="@{save}" action="#" method="post">
+ 		 
+			<label for="fname">Firstname</label>
+			<input type="text" id= "fname" th:field="*{firstName}"/>
+			
+			
+			<label for="lname">Lastname</label>
+			<input type="text" id="lname" th:field="*{lastName}"/>
+	  				
+			
+			<label for="email">Email</label> 
+			<input type="text" th:field="*{email}"/>
+	<input type="submit" value="Save"></input>
+				<!-- see comparison studentlist -->
+		</form>
+ 	</div>
+</body>
+</html>
